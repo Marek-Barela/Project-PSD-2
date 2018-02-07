@@ -8,4 +8,4 @@ Used technology:
 - SASS
 - Bootstrap
 - RWD
-- GULP
+- Gulp
