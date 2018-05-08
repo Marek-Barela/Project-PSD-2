@@ -12,21 +12,22 @@
 </head>
 
 <body>
-    <header class="main-header background">
+    <header id="header" class="main-header background">
         <div class="main-header__container container">
+            <div class="main-header__scicky-nav"></div>
             <div class="main-header__logo">
-                <a href="#">
+                <a href="#header">
                     <img src="images/logo.png" alt="Tanatos Studio">
                 </a>
             </div>
             <nav>
                 <div class="main-header__hidden-menu">
                     <ul class="main-header__navigation">
-                        <li class="navigation__item"></li>
-                        <li class="navigation__item"></li>
-                        <li class="navigation__item"></li>
-                        <li class="navigation__item"></li>
-                        <li class="navigation__item"></li>
+                        <li class="navigation__item"><a href="#our-offer">Our Offer</a></li>
+                        <li class="navigation__item"><a href="#subscribe">Subscribe</a></li>
+                        <li class="navigation__item"><a href="#our-works">Our Works</a></li>
+                        <li class="navigation__item"><a href="#our-team">Our Team</a></li>
+                        <li class="navigation__item"><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <button class="main-header__menu-btn hamburger hamburger--spin" type="button">
@@ -50,7 +51,7 @@
             <img class="main-header__scroll-down" src="images/circle-arrow.png" alt="scroll down">
         </div>
     </header>
-    <section class="section-features">
+    <section id="our-offer" class="section-features">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-6 col-3">
@@ -84,7 +85,7 @@
             </div>
         </div>
     </section>
-    <section class="section-subscription background">
+    <section id="subscribe" class="section-subscription background">
         <div class="section-subscription__container container">
             <form class="subscription__form">
                 <input type="text" placeholder="Enter Your email adress for newsletter">
@@ -92,7 +93,7 @@
             </form>
         </div>
     </section>
-    <section class="section-our-works">
+    <section id="our-works" class="section-our-works">
         <div class="container">
             <div class="row">
                 <h1 class="section__header">OUR
@@ -165,12 +166,31 @@
     </section>
     <section class="section-testimonials background">
         <div class="section-testimonials__container container">
-            <img src="images/avatar.png" alt="John Smith">
-            <p class="section-testimonials__quote">These guys are incredible! I get my project in 10 days and it was awesome! Very good service! Highly recommended!</p>
-            <p class="section-testimonials__author">John Smith</p>
+            <div class="section-testimonials__slide section-testimonials__slide--is-active">
+                <img src="images/avatar.png" alt="John Smith">
+                <p class="section-testimonials__quote">These guys are incredible! I get my project in 10 days and it was awesome! Very good service! Highly recommended!</p>
+                <p class="section-testimonials__author">John Smith</p>
+            </div>
+            <div class="section-testimonials__slide">
+                <img src="images/avatar.png" alt="John Smith">
+                <p class="section-testimonials__quote">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, iusto.</p>
+                <p class="section-testimonials__author">John Smith</p>
+            </div>
+            <div class="section-testimonials__slide">
+                <img src="images/avatar.png" alt="John Smith">
+                <p class="section-testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum amet, mollitia sint corporis excepturi culpa?</p>
+                <p class="section-testimonials__author">John Smith</p>
+            </div>
+            <div class="section-testimonials__slide">
+                <img src="images/avatar.png" alt="John Smith">
+                <p class="section-testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nobis. Nemo, nobis.</p>
+                <p class="section-testimonials__author">John Smith</p>
+            </div>
+            <span class="fas fa-chevron-left"></span>
+            <span class="fas fa-chevron-right"></span>
         </div>
     </section>
-    <section class="section-our-team">
+    <section id="our-team" class="section-our-team">
         <div class="container">
             <div class="row">
                 <h1 class="section__header">OUR
@@ -276,7 +296,7 @@
             </div>
         </div>
     </section>
-    <section class="section-contact background">
+    <section id="contact" class="section-contact background">
         <div class="container">
             <h1 class="section__header contact__header">SAY
                 <span>HELLO</span>
@@ -328,6 +348,8 @@
         </div>
     </footer>
     <script src="JS/fontawesome-all.min.js"></script>
+    <script src="JS/jquery-3.3.1.min.js"></script>
+    <script src="JS/scripts.js"></script>
 </body>
 
 </html>
