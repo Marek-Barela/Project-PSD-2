@@ -3,6 +3,11 @@ $(document).ready(function() {
     $logo = $('.main-header__logo'),
     $hamburgerBtn = $('.main-header__menu-btn'),
     $hiddenMenuLayer = $('.main-header__hidden-menu');
+    let $testimonialsSlide = $('.section-testimonials__slide'),
+    testimonialsLength = $('.section-testimonials__slide').length,
+    currentSlideIndex = 0;
+
+    console.log($testimonialsSlide)
 
     function stickyNav() {
         if ($(window).scrollTop()) {
@@ -35,8 +40,18 @@ $(document).ready(function() {
         removeNavigationClass()
     }
 
+    function nextSlide() {
+        let currentSlide = $testimonialsSlide[currentSlideIndex]
+        currentSlide.addClass('section-testimonials__slide--is-active');
+    }
+
+    function previousSlide() {
+        console.log($testimonialsSlide.addClass('section-testimonials__slide--is-active'))
+    }
     $(window).on('scroll', stickyNav)
     $hamburgerBtn.on('click', toggleHiddenMenu)
     $('a[href*="#"]').on('click', scrollToLink)
+    $('.fa-chevron-left').on('click', previousSlide)
+    $('.fa-chevron-right').on('click', nextSlide)
     stickyNav()
 })
