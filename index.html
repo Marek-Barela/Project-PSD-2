@@ -8,6 +8,7 @@
     <title>TanatosStudio</title>
     <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/owl.carousel.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800&amp;subset=latin-ext" rel="stylesheet">
 </head>
 
@@ -88,7 +89,7 @@
     <section id="subscribe" class="section-subscription background">
         <div class="section-subscription__container container">
             <form class="subscription__form">
-                <input type="text" placeholder="Enter Your email adress for newsletter">
+                <input name="email" type="text" placeholder="Enter Your email adress for newsletter">
                 <input type="submit" value="SUBSCRIBE">
             </form>
         </div>
@@ -165,8 +166,8 @@
         </div>
     </section>
     <section class="section-testimonials background">
-        <div class="section-testimonials__container container">
-            <div class="section-testimonials__slide section-testimonials__slide--is-active">
+        <div class="section-testimonials__container container owl-carousel">
+            <div class="section-testimonials__slide">
                 <img src="images/avatar.png" alt="John Smith">
                 <p class="section-testimonials__quote">These guys are incredible! I get my project in 10 days and it was awesome! Very good service! Highly recommended!</p>
                 <p class="section-testimonials__author">John Smith</p>
@@ -186,8 +187,6 @@
                 <p class="section-testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nobis. Nemo, nobis.</p>
                 <p class="section-testimonials__author">John Smith</p>
             </div>
-            <span class="fas fa-chevron-left"></span>
-            <span class="fas fa-chevron-right"></span>
         </div>
     </section>
     <section id="our-team" class="section-our-team">
@@ -303,11 +302,11 @@
             </h1>
             <p class="section__paragraph contact__paragraph">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             <div class="contact__form-container">
-                <form class="contact-form">
-                    <input class="contact-form__input" type="text" placeholder="Your Email">
-                    <input class="contact-form__input" type="text" placeholder="Subject">
-                    <textarea class="contact-form__textarea" rows="10" cols="20" placeholder="Your Message"></textarea>
-                    <input class="contact-form__button" type="submit" value="HIRE US">
+                <form id="contact-form" class="contact-form">
+                    <input name="email" class="contact-form__input" type="text" placeholder="Your Email">
+                    <input name="Subject" class="contact-form__input" type="text" placeholder="Subject">
+                    <textarea name="Message" class="contact-form__textarea" rows="10" cols="20" placeholder="Your Message"></textarea>
+                    <input name="Submit" class="contact-form__button" type="submit" value="HIRE US">
                 </form>
                 <div class="contact__media">
                     <div class="contact-media our-team__media">
@@ -349,6 +348,7 @@
     </footer>
     <script src="JS/fontawesome-all.min.js"></script>
     <script src="JS/jquery-3.3.1.min.js"></script>
+    <script src="JS/owl.carousel.min.js"></script>
     <script src="JS/scripts.js"></script>
 </body>
 

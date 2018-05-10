@@ -525,31 +525,27 @@ a {
     right: 10px; }
 
 .section-testimonials__container {
+  position: relative; }
+
+.section-testimonials__slide {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 400px;
-  position: relative; }
-
-.section-testimonials__slide {
-  display: none; }
-
-.section-testimonials__slide--is-active {
-  display: block; }
+  min-height: 400px; }
 
 .section-testimonials__quote {
   font-style: italic;

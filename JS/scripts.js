@@ -3,11 +3,6 @@ $(document).ready(function() {
     $logo = $('.main-header__logo'),
     $hamburgerBtn = $('.main-header__menu-btn'),
     $hiddenMenuLayer = $('.main-header__hidden-menu');
-    let $testimonialsSlide = $('.section-testimonials__slide'),
-    testimonialsLength = $('.section-testimonials__slide').length,
-    currentSlideIndex = 0;
-
-    console.log($testimonialsSlide)
 
     function stickyNav() {
         if ($(window).scrollTop()) {
@@ -40,18 +35,18 @@ $(document).ready(function() {
         removeNavigationClass()
     }
 
-    function nextSlide() {
-        let currentSlide = $testimonialsSlide[currentSlideIndex]
-        currentSlide.addClass('section-testimonials__slide--is-active');
-    }
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        navText: ['<span class="fas fa-chevron-left fa-2x"></span>','<span class="fas fa-chevron-right fa-1x"></span>'],
+        mouseDrag: false,
+        autoplay: true,
+        dots: false
+    });
 
-    function previousSlide() {
-        console.log($testimonialsSlide.addClass('section-testimonials__slide--is-active'))
-    }
     $(window).on('scroll', stickyNav)
     $hamburgerBtn.on('click', toggleHiddenMenu)
     $('a[href*="#"]').on('click', scrollToLink)
-    $('.fa-chevron-left').on('click', previousSlide)
-    $('.fa-chevron-right').on('click', nextSlide)
     stickyNav()
 })
