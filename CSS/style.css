@@ -204,7 +204,7 @@ a {
 .main-header__hidden-menu {
   position: fixed;
   height: 100%;
-  width: 300px;
+  width: 100%;
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
@@ -740,6 +740,8 @@ footer {
     font-size: 1.6em; }
   .main-header__paragraph {
     font-size: 0.8em; }
+  .main-header__hidden-menu {
+    width: 300px; }
   .subscription__form {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
