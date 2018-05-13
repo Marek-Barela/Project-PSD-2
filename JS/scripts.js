@@ -50,7 +50,6 @@ $(document).ready(function() {
     
     function emailValidation(e) {
         let emailValue = $('.contact-form__input-email').val();
-        console.log(emailValue)
         if(emailValue == '') {
             e.preventDefault()
             $('.contact-email--error').text("The field cannot be empty")
@@ -75,7 +74,6 @@ $(document).ready(function() {
 
     function messageValidation(e) {
         let messageValue = $('.contact-form__textarea').val();
-        console.log(messageValue)
         if(messageValue == '') {
             e.preventDefault()
             $('.message--error').text("The field cannot be empty")
