@@ -90,8 +90,11 @@
     <section id="subscribe" class="section-subscription background">
         <div class="section-subscription__container container">
             <form class="subscription__form">
-                <input name="email" type="text" placeholder="Enter Your email adress for newsletter">
-                <input type="submit" value="SUBSCRIBE">
+                <div class="form__email">
+                    <input class="subscription-email" name="email" type="text" placeholder="Enter Your email adress for newsletter">
+                    <p class="email--error"></p>
+                </div>
+                <input class="subscription-submit" type="submit" value="SUBSCRIBE">
             </form>
         </div>
     </section>
@@ -304,9 +307,20 @@
             <p class="section__paragraph contact__paragraph">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             <div class="contact__form-container">
                 <form id="contact-form" class="contact-form">
-                    <input name="email" class="contact-form__input" type="text" placeholder="Your Email">
-                    <input name="Subject" class="contact-form__input" type="text" placeholder="Subject">
-                    <textarea name="Message" class="contact-form__textarea" rows="10" cols="20" placeholder="Your Message"></textarea>
+                    <div class="form__flex-container">
+                        <div class="form__email">
+                            <input name="email" class="contact-form__input contact-form__input-email" type="text" placeholder="Your Email">
+                            <p class="contact-email--error"></p>
+                        </div>
+                        <div class="form__subject">
+                            <input name="Subject" class="contact-form__input contact-form__input-subject" type="text" placeholder="Subject">
+                            <p class="subject--error"></p>
+                        </div>
+                    </div>
+                    <div class="form-message">
+                        <textarea name="Message" class="contact-form__textarea" rows="10" cols="20" placeholder="Your Message"></textarea>
+                        <p class="message--error"></p>
+                    </div>
                     <input name="Submit" class="contact-form__button" type="submit" value="HIRE US">
                 </form>
                 <div class="contact__media">

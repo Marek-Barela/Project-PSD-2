@@ -2,7 +2,8 @@ $(document).ready(function() {
     const $stickyNavigation = $('.main-header__scicky-nav'),
     $logo = $('.main-header__logo'),
     $hamburgerBtn = $('.main-header__menu-btn'),
-    $hiddenMenuLayer = $('.main-header__hidden-menu');
+    $hiddenMenuLayer = $('.main-header__hidden-menu'),
+    reg = /^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i;
 
     function stickyNav() {
         if ($(window).scrollTop()) {
@@ -35,6 +36,54 @@ $(document).ready(function() {
         removeNavigationClass()
     }
 
+    function subscriptionValidation(e) {
+        let inputValue = $('.subscription-email').val();
+        if(inputValue == '') {
+            e.preventDefault()
+            $('.email--error').text("The field cannot be empty")
+        }
+        else if(reg.test(inputValue) === false) {
+            e.preventDefault()
+            $('.email--error').text("please enter a valid email address")
+        }
+    }
+    
+    function emailValidation(e) {
+        let emailValue = $('.contact-form__input-email').val();
+        console.log(emailValue)
+        if(emailValue == '') {
+            e.preventDefault()
+            $('.contact-email--error').text("The field cannot be empty")
+        }
+        else if(reg.test(emailValue) === false) {
+            e.preventDefault()
+            $('.contact-email--error').text("Please enter a valid email address")
+        }
+        else
+            $('.contact-email--error').text("")
+    }
+
+    function subjectValidation(e) {
+        let subjectValue = $('.contact-form__input-subject').val();
+        if(subjectValue == '') {
+            e.preventDefault()
+            $('.subject--error').text("The field cannot be empty")
+        }
+        else
+            $('.subject--error').text("")
+    }
+
+    function messageValidation(e) {
+        let messageValue = $('.contact-form__textarea').val();
+        console.log(messageValue)
+        if(messageValue == '') {
+            e.preventDefault()
+            $('.message--error').text("The field cannot be empty")
+        }
+        else
+            $('.message--error').text("")
+    }
+
     $('.owl-carousel').owlCarousel({
         items: 1,
         loop: true,
@@ -48,5 +97,9 @@ $(document).ready(function() {
     $(window).on('scroll', stickyNav)
     $hamburgerBtn.on('click', toggleHiddenMenu)
     $('a[href*="#"]').on('click', scrollToLink)
+    $('.subscription-submit').on('click', subscriptionValidation)
+    $('.contact-form__button').on('click', emailValidation)
+    $('.contact-form__button').on('click', subjectValidation)
+    $('.contact-form__button').on('click', messageValidation)
     stickyNav()
 })
